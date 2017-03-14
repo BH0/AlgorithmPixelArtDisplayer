@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+</style>
+<head>
+<title> Algorithm Pixel Art Displayer </title>
+</head>
+<body>
+
+<canvas id = "Canvas" width="400" height="400"></canvas>
+
+<script>
+
+var canvas, context, ctx, width, height;
+
+canvas = document.getElementById("Canvas");
+context = canvas.getContext("2d");
+ctx = context;
+
+width = height = 400;
+
+var imageNumber = 0, maxImageNumber = 3; // Please update this when you add a new image & please add a new image as a function 
+// Minium imageNumber is 0 // maxImageNumber is 1 more than the actual number of images
+
+function drawBackground() {
+
+	ctx.beginPath();
+	ctx.rect(0, 0, width, height);
+	ctx.fillStyle = "grey";
+	ctx.fill();
+	ctx.closePath();
+
+}
+
+function imageOne() { // Pokeball or 'Rock hand'
+	
+		// Begin Draw Outline
+		ctx.beginPath();
+		for (var i = 0; i < 2; i ++) {
+			ctx.rect(148 + i * 16, height/2-100, 8, 8);
+		}
+		for (var i = 0; i < 7; i++) {
+			ctx.rect(180, 116+i*16, 8, 8);
+		}
+		for (var i = 0; i < 2; i++) {
+			ctx.rect(196+i*16, 226, 8, 8);
+		}
+		ctx.rect(212, 242, 8, 8);
+		for (var i = 0; i < 3; i++) {
+			ctx.rect(226+i*16, 256, 8, 8);
+		}
+		for (var i = 0; i < 4; i++) {
+			ctx.rect(224, 210-i*16, 8, 8);
+		}
+		for (var i = 0; i < 2; i++) {
+			ctx.rect(196+i*16, 148, 8, 8);
+		}
+		for (var i = 0; i < 3; i++) {
+			ctx.rect(234+i*16, 148, 8, 8);
+		}
+		for (var i = 0; i < 3; i++) {
+			ctx.rect(240+i*16, 210, 8, 8);
+		}
+		for (var i = 0; i < 4; i++) {
+			ctx.rect(272, 210-i*16, 8, 8); 
+		}
+		
+		for (var i = 0; i > -2; i--) {
+			// ctx.rect(148 - i * 16, height/2-210, 8, 8);
+			ctx.rect(302+i*16, 100, 8, 8);
+		}
+		for (var i = 0; i > -7; i--) {
+			//ctx.rect(280, 216-i*16, 8, 8);
+			ctx.rect(272, 210+i*16, 8, 8);
+		}
+		for (var i = 0; i > -7; i--) {
+			//ctx.rect(280, 216-i*16, 8, 8);
+			ctx.rect(316, 216+i*16, 8, 8);
+		}
+		for (var i = 0; i < 4; i++) {
+			ctx.rect(332, 224+i*16, 8, 8);
+		}
+		for (var i = 0; i < 2; i++) {
+			ctx.rect(316, 282+i*16, 8, 8);
+		}
+		for (var i = 2; i > 0; i--) {
+			 ctx.rect(316-i*16, 302+i*16, 8, 8);
+		}
+		for (var i = 0; i < 9; i++) {
+			ctx.rect(284-i*16, 336, 8, 8);
+		}
+		ctx.rect(140, 320, 8, 8);
+		for (var i = 0; i < 2; i++) {
+			ctx.rect(126, 306-i*16, 8, 8);
+		}
+		for (var i = 0; i < 11; i++) {
+			ctx.rect(126, 274-i*16, 8, 8);
+		}
+		// End Draw Outline
+		
+		ctx.fillStyle = "black";
+		ctx.fill();
+		ctx.closePath();
+	
+	
+}
+
+function imageTwo() { // Triangle
+
+	for (var i = 0; i < 2; i += 1) {
+		ctx.beginPath();
+		ctx.rect(148 + i * 16, height/2-48, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+		for (var i = 0; i < 4; i += 1) {
+		ctx.beginPath();
+		ctx.rect(132 + i * 16, height/2-36, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+		for (var i = 0; i < 6; i += 1) {
+		ctx.beginPath();
+		ctx.rect(116 + i * 16, height/2-24, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+		for (var i = 0; i < 8; i += 1) {
+		ctx.beginPath();
+		ctx.rect(100 + i * 16, height/2-16, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+	for (var i = 0; i < 12; i += 1) {
+		ctx.beginPath();
+		ctx.rect(64 + i * 16, height/2, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+		for (var i = 0; i < 14; i += 1) {
+		ctx.beginPath();
+		ctx.rect(48 + i * 16, height/2+16, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+		for (var i = 0; i < 16; i += 1) {
+		ctx.beginPath();
+		ctx.rect(32 + i * 16, height/2+24, 16, 16);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.closePath();
+	}
+}
+
+function imageThree() { // Sponegebob
+	ctx.beginPath();
+	ctx.rect(width/2, height/2, 64, 64);
+	ctx.fillStyle = "blue";
+	ctx.fill();
+	ctx.closePath();
+}
+
+
+function main() {
+	ctx.clearRect(0, 0, 400, 400);
+	
+	drawBackground();
+	
+	if (up) {
+		up = false;
+		if (imageNumber < maxImageNumber) {
+			imageNumber += 1;
+		} else {
+			imageNumber = 0;
+		}
+	}
+	else if (down) {
+		down = false;
+		if (imageNumber >= 0) {
+			imageNumber -= 1;
+		} else {
+			imageNumber = maxImageNumber; // - 1;
+		}
+	}
+	
+	if (imageNumber == 0) {
+		imageOne();
+	} else if (imageNumber == 1) {
+		imageTwo();
+	} else if (imageNumber == 2) {
+		imageThree();
+	} 
+	
+	ctx.font = "64px Helvitica";
+	ctx.fillStyle = "black";
+	ctx.fillText("" + imageNumber, 64, 64);
+}
+
+setInterval(main, 10);
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+var keycodeA = 38; var keycodeB = 40;
+var up = down = false;
+
+function keyDownHandler(e) {
+
+	if (e.keyCode == keycodeA) { 
+		up = true;
+	}
+	else if (e.keyCode == keycodeB) { 
+		down = true;
+	}
+}
+function keyUpHandler(e) {
+	if (e.keyCode == keycodeA || keycodeB) {
+		up = false;
+		down = false;
+	}
+}
+
+</script>
+
+</body>
+</html>
