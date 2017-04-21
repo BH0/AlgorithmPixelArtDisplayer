@@ -200,7 +200,7 @@ function main() {
 		} else {
 			imageNumber = maxImageNumber; // - 1;
 		}
-	}
+	} 
 	
 	if (imageNumber == 0) {
 		imageOne();
@@ -208,7 +208,9 @@ function main() {
 		imageTwo();
 	} else if (imageNumber == 2) {
 		imageThree();
-	} 
+	} else if (imageNumber == 3) {
+		fireTruck(); 
+	}
 	
 	ctx.font = "64px Helvitica";
 	ctx.fillStyle = "black";
