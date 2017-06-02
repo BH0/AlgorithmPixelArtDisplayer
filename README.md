@@ -10,3 +10,5 @@ HTML, JavaScript
 # Description 
 .An open-source project on Github with the aim of allowing myself and others to express themselves creatively using pixel-art. My aim for the project is for it to act as a canvas for anyone and personally I will be trying to display some interesting pixel-art using the least number of lines of code that I can. 
 
+# View Project in Action
+https://bh0.github.io/AlgorithmPixelArtDisplayer/
